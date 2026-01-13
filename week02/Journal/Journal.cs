@@ -22,8 +22,7 @@ public class Journal
 
     public void SaveToFile(string file)
     {   
-        string filename = "myFile.txt";
-        using (StreamWriter outputFile = new StreamWriter(filename))
+        using (StreamWriter outputFile = new StreamWriter(file))
         {
             foreach (Entry entry in _entries)
             {
@@ -37,8 +36,7 @@ public class Journal
     {
         _entries.Clear();
 
-        string filename = "myFile.txt";
-        string[] lines = System.IO.File.ReadAllLines(filename);
+        string[] lines = System.IO.File.ReadAllLines(file);
 
         foreach (string line in lines)
         {

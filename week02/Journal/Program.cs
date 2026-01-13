@@ -20,27 +20,43 @@ class Program
             Console.WriteLine("Please select one of the following choices.");
             selection = Console.ReadLine();
             Console.WriteLine();
-        }
-        if (selection == "1")
-        {
-            Entry entry = new Entry();
-            entry._date = DateTime.Now.ToShortDateString();
+        
+            if (selection == "1")
+            {
+                Entry entry = new Entry();
 
-            entry._prompt = promptGenerator.GetRandomPrompt();
-            Console.WriteLine(entry._prompt);
-            entry._entryText = Console.ReadLine();
+                entry._date = DateTime.Now.ToShortDateString();
 
-            journal.AddEntry(entry);
-        }
+                entry._prompt = promptGenerator.GetRandomPrompt();
+                Console.WriteLine(entry._prompt);
+                entry._entryText = Console.ReadLine();
 
-        if (selection == "2")
-        {
-            journal.Display();
-        }
+                journal.AddEntry(entry);
+            }
 
-        if (selection == "3")
-        {
-            
+            else if (selection == "2")
+            {
+                journal.Display();
+            }
+
+            else if (selection == "3")
+            {
+                Console.Write("Enter a filename to load: ");
+                string filename = Console.ReadLine();
+                journal.LoadFromFile(filename);
+            }
+
+            else if (selection == "4")
+            {
+                Console.Write("Enter a filename to save: ");
+                string filename = Console.ReadLine();
+                journal.SaveToFile(filename);
+                Console.WriteLine("Good job saving your file!");
+            }
+            else
+            {
+                Console.WriteLine("Have a nice day!");
+            }
         }
     }
 }
