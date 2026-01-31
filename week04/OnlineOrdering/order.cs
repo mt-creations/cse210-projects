@@ -41,11 +41,11 @@ public class Order
 
     public string GetPackingLabel()
     {
-        string label = "Packing Label" + Environment.NewLine;
+        string label = "Packing Label" + "\n";
 
         foreach (Product product in _products)
         {
-            label += product.GetName() + " Product ID: " + product.GetProductId() + Environment.NewLine;
+            label += product.GetName() + " - Product ID: " + product.GetProductId() + "\n";
         }
 
         return label;
@@ -53,9 +53,9 @@ public class Order
 
     public string GetShippingLabel()
     {
-        string label = "Shipping Label" + Environment.NewLine;
+        string label = "Shipping Label" + "\n";
 
-        label += _customer.GetName() + Environment.NewLine;
+        label += _customer.GetName() + "\n";
         label += _customer.GetAddress().GetFullAddress();
 
         return label;

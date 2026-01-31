@@ -29,7 +29,7 @@ public class Address
 
     public string GetFullAddress()
     {
-        return _streetAddress + Environment.NewLine + _city + ", " + Environment.NewLine + _country;
+        return _streetAddress + "\n" + _city + ", " + _stateOrProvince + "\n" + _country;
     }
 
 }
