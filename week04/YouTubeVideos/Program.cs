@@ -21,7 +21,7 @@ class Program
 
         Video birdVideo = new Video("Everybody Loves Ray-bird", "Tony Giovana", 145);
         birdVideo.AddComment(new Comment("Ornithologist-Club1", "How did they get that little hat onto that bird?"));
-        birdVideo.AddComment(new Comment("Diana Johnston", "Hillarious! 🤣"));
+        birdVideo.AddComment(new Comment("Diana Johnston", "Hilarious! 🤣"));
         birdVideo.AddComment(new Comment("Tyler Rex", "Love the play on words."));
 
         videos.Add(catVideo);

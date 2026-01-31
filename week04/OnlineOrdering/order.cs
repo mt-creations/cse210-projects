@@ -18,9 +18,9 @@ public class Order
         _products.Add(product);
     }
 
-    public double GetTotalPrice()
+    public decimal GetTotalPrice()
     {
-        double total = 0;
+        decimal total = 0;
 
         foreach (Product product in _products)
         {
