@@ -75,6 +75,6 @@ public class ReflectionActivity : Activity
     private void DisplayQuestion()
     {
         Console.Write($"\n> {GetRandomQuestion()} ");
-        ShowSpinner(10);
+        ShowSpinner(8);
     }
 }
