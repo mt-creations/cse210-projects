@@ -27,7 +27,7 @@ class Program
 
             if (selection == "1")
             {
-                
+                manager.CreateGoal();
             }
 
             else if (selection == "2")
