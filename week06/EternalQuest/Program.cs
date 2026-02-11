@@ -32,22 +32,22 @@ class Program
 
             else if (selection == "2")
             {
-                
+                manager.ListGoalNames();
             }
 
             else if (selection == "3")
             {
-                
+                manager.SaveGoals();
             }
 
             else if (selection == "4")
             {
-                
+                manager.LoadGoals();
             }
 
             else if (selection == "5")
             {
-                
+                manager.RecordEvent();
             }
 
         }

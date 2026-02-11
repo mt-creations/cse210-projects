@@ -3,7 +3,7 @@
 
 public class EternalGoal : Goal
 {
-    public EternalGoal(string name, string description, string points)
+    public EternalGoal(string name, string description, int points)
         : base(name, description, points)
     {
         
@@ -21,7 +21,7 @@ public class EternalGoal : Goal
 
     public override string GetStringRepresentation()
     {
-        return $"EternalGoal|{_shortName}|{_description}|{_points}";
+        return $"EternalGoal|{GetShortName()}|{GetDescription()}|{_points}";
     }
 
 }
